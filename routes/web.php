@@ -531,7 +531,7 @@ Route::post('/postcontact', [App\Http\Controllers\VisitorController::class, 'pos
 
 Route::get('/assetsmanagement', [App\Http\Controllers\VisitorController::class, 'assetsmanagement'])->name('assetsmanagement');
 Route::get('/testimony', [App\Http\Controllers\VisitorController::class, 'testimony'])->name('testimony');
-Route::get('/fiduciary', [App\Http\Controllers\VisitorController::class, 'fiduciary'])->name('fiduciary');
+Route::get('/cryptoplans', [App\Http\Controllers\VisitorController::class, 'cryptoplans'])->name('cryptoplans');
 Route::get('/howwearedif', [App\Http\Controllers\VisitorController::class, 'howwearedif'])->name('howwearedif');
 Route::get('/ourteam', [App\Http\Controllers\VisitorController::class, 'ourteam'])->name('ourteam');
 

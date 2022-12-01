@@ -14,7 +14,7 @@
 				}
 </style>
 
-<!-- Mirrored from Wiiwiiprotrade.io/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 27 Nov 2022 01:53:24 GMT -->
+<!-- Mirrored from {{ $compd ? $compd->companyname : 'company name' }} .io/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 27 Nov 2022 01:53:24 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -27,7 +27,7 @@
 				<meta name="viewport" content="width=device-width, initial-scale=1">
 				<meta name="theme-color" content="#181818" />
 
-				<title>WI- No 1 Trading Platform</title>
+				<title>Welcome | {{ $compd ? $compd->companyname : 'company name' }} | Bitcoin Investment | Cryptocurrency Investment | Etherium Investment</title>
 				<link href="{{ asset('wiwi/js/vendors/uikit.min.jss') }}" rel="stylesheet">
 				<link href="{{ asset('wiwi/css/vendors/uikit.min.css') }}" rel="stylesheet">
 				<link href="{{ asset('wiwi/css/style.css') }}" rel="stylesheet">
@@ -366,7 +366,7 @@
 																												<ul class="uk-navbar-nav uk-visible@m">
 																																<li><a href="{{ route('about') }}">About Us</a></li>
 																																<li><a href="{{route('assetsmanagement')}}">Markets</a></li>
-																																<li><a href="{{ route('fiduciary') }}">Plans</a></li>
+																																<li><a href="{{ route('cryptoplans') }}">Plans</a></li>
 																																{{-- <li><a href="{{route('services')}}">Our Services</a></li> --}}
 																																<li><a href="{{route('buybtc')}}">Buy/Sell</a></li>
 																																<li><a href="{{route('contact')}}">Contact Us</a></li>
@@ -403,7 +403,7 @@
 																								<div class="in-award-badge">
 																												<h3 class="uk-margin-remove">Investors #1 Choice</h3>
 																												<h4 class="uk-margin-remove-top uk-margin-small-bottom uk-text-uppercase in-heading-thin">
-																																Wiiwiiprotrade</h4>
+																																{{ $compd ? $compd->companyname : 'company name' }} </h4>
 																								</div>
 																				</div>
 																</div>
@@ -510,7 +510,7 @@
 																												
 																												<li><a href="{{route('buybtc')}}">Buy Digital Currency</a></li>
 																								</ul>
-																								<p class="copyright-text">©2022 Wiiwiiprotrade. All Rights Reserved.</p>
+																								<p class="copyright-text">©2022 {{ $compd ? $compd->companyname : 'company name' }} . All Rights Reserved.</p>
 																				</div>
 																				<div class="uk-width-1-3@m uk-flex uk-flex-right uk-visible@m">
 																								<span class="uk-margin-right"><img src="./wiwi/img/in-lazy.gif"
@@ -534,6 +534,19 @@
 								</div>
 
 				</footer>
+				<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+	(function(){
+	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+	s1.async=true;
+	s1.src='https://embed.tawk.to/638874fbb0d6371309d215e1/1gj6ghu4m';
+	s1.charset='UTF-8';
+	s1.setAttribute('crossorigin','*');
+	s0.parentNode.insertBefore(s1,s0);
+	})();
+	</script>
+	<!--End of Tawk.to Script-->
 				<script src="{{ asset('wiwi/js/jquery-3.6.0.min.js') }}"></script>
 				<script src="{{ asset('wiwi/js/vendors/uikit.min.js') }}"></script>
 				<script src="{{ asset('wiwi/js/vendors/utilities.min.js') }}"></script>
@@ -754,6 +767,6 @@
 				</script>
 </body>
 
-<!-- Mirrored from Wiiwiiprotrade.io/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 27 Nov 2022 01:54:03 GMT -->
+<!-- Mirrored from {{ $compd ? $compd->companyname : 'company name' }} .io/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 27 Nov 2022 01:54:03 GMT -->
 
 </html>
