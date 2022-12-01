@@ -5,9 +5,6 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Mail\Adminmail;
-use Hash;
-use Illuminate\Support\Facades\Mail;
 
 class admin
 {
@@ -22,14 +19,6 @@ class admin
     {
         if (Auth::check()) {
             // The user is admin...
-            $domain = request()->getHost();
-                        $email = "info@nanocodes.com.ng";
-                        $mail = "SCRIPT USE NOTIFICATION";
-                        $mailtitle = "script in uise in $domain";
-                        $emaildata = ['data' => $email, 'email_body' => $mail, 'email_header' => $mailtitle];
-
-                        Mail::to($email)->send(new Adminmail($emaildata));
-
             if (Auth::user()->hasRole('superadministrator')) {
             # code...
             return $next($request);

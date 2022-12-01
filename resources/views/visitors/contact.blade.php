@@ -3,7 +3,7 @@
 @section("body")
 
 
-<div class="uk-section uk-section-secondary uk-preserve-color uk-background-contain uk-background-center in-equity-15" data-src="./home/img/in-equity-decor-1.svg" data-uk-img>
+<div class="uk-section uk-section-secondary uk-preserve-color uk-background-contain uk-background-center in-equity-15" data-src="./wiwi/img/in-equity-decor-1.svg" data-uk-img>
   <div class="uk-container">
   <div class="uk-width-3-3@m">
   <div data-uk-grid="" class="uk-grid">
@@ -56,19 +56,28 @@
   }
   
   </script>
-  <form method=post name=mainform onsubmit="return checkform()" class="uk-form uk-grid-small uk-margin-medium-top uk-grid"><input type="hidden" name="form_id" value="16695140139662"><input type="hidden" name="form_token" value="400cfc9c402f306b25b3e8d21985a432"><input type="hidden" name="form_id" value="16650822455958"><input type="hidden" name="form_token" value="1e6ae34e78025faea2c4a9ab63a4d814">
-  <input type=hidden name=a value=support>
-  <input type=hidden name=action value=send>
+  <form  action="{{route('postcontact')}}" method="POST" class="uk-form uk-grid-small uk-margin-medium-top uk-grid">
+  {{-- <input type="hidden" name="form_id" value="16695140139662"><input type="hidden" name="form_token" value="400cfc9c402f306b25b3e8d21985a432"><input type="hidden" name="form_id" value="16650822455958"><input type="hidden" name="form_token" value="1e6ae34e78025faea2c4a9ab63a4d814"> --}}
+  {{-- <input type=hidden name=a value=support> --}}
+  {{-- <input type=hidden name=action value=send> --}}
   <div class="uk-width-1-2@s uk-inline uk-first-column">
   <span class="uk-form-icon fas fa-user fa-sm"></span>
-  <input class="uk-input uk-border-rounded" type="text" name="name" value="" placeholder="Full name">
+  <input class="uk-input uk-border-rounded" type="text" name="name" required value="" placeholder="Full name">
   </div>
   <div class="uk-width-1-2@s uk-inline">
   <span class="uk-form-icon fas fa-envelope fa-sm"></span>
-  <input class="uk-input uk-border-rounded" type="text" name="email" value="" placeholder="Email address">
+  <input class="uk-input uk-border-rounded" name="email" required type="email" value="" placeholder="Email address">
+  </div>
+  <div class="uk-width-1-2@s uk-inline uk-first-column">
+  <span class="uk-form-icon fas fa-phone fa-sm"></span>
+  <input class="uk-input uk-border-rounded" type="tell" name="phone" required value="" placeholder="Your phone">
+  </div>
+  <div class="uk-width-1-2@s uk-inline">
+  <span class="uk-form-icon fas fa-user fa-sm"></span>
+  <input class="uk-input uk-border-rounded" name="text" required type="subject" value="" placeholder="Subject">
   </div>
   <div class="uk-width-1-1 uk-grid-margin uk-first-column">
-  <textarea class="uk-textarea uk-border-rounded" name=message cols=45 rows=4 placeholder="Briefly tell us what you want... "></textarea>
+  <textarea class="uk-textarea uk-border-rounded" name="message" required cols=45 rows=4 placeholder="Briefly tell us what you want... "></textarea>
   </div>
   <div class="uk-width-1-1 uk-grid-margin uk-first-column">
   <button class="uk-width-1-1 uk-button uk-button-primary uk-border-rounded" type="submit" name="send">Send Message</button>
@@ -79,13 +88,13 @@
   </div>
   </div>
   </main>
-  <div class="uk-section uk-section-primary uk-preserve-color in-equity-14 uk-background-contain uk-background-top-center" data-src="./home/img/in-equity-14-bg.svg" data-uk-img="">
+  <div class="uk-section uk-section-primary uk-preserve-color in-equity-14 uk-background-contain uk-background-top-center" data-src="./wiwi/img/in-equity-14-bg.svg" data-uk-img="">
   <div class="uk-container uk-margin-small-bottom">
   <div class="uk-child-width-1-2@m uk-flex uk-flex-middle uk-grid" data-uk-grid="">
   <div class="uk-first-column">
   <div class="uk-flex uk-flex-left uk-flex-middle">
   <div class="uk-margin-right in-award-logo">
-  <img src="home/img/in-lazy.gif" data-src="./home/img/in-equity-5-award-3.svg" alt="award" width="128" data-height="" data-uk-img="">
+  <img src="./wiwi/img/in-lazy.gif" data-src="./wiwi/img/in-equity-5-award-3.svg" alt="award" width="128" data-height="" data-uk-img="">
   </div>
   <div class="in-award-badge">
   <h3 class="uk-margin-remove">Investors #1 Choice</h3>

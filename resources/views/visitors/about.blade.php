@@ -1,7 +1,7 @@
 @extends('layouts.spacedcustomlayout')
 
 @section('body')
-<div class="uk-section uk-section-secondary uk-preserve-color uk-background-contain uk-background-center in-equity-15" data-src="./home/img/in-equity-decor-1.svg" data-uk-img>
+<div class="uk-section uk-section-secondary uk-preserve-color uk-background-contain uk-background-center in-equity-15" data-src="./wiwi/img/in-equity-decor-1.svg" data-uk-img>
     <div class="uk-container">
     <div class="uk-width-3-3@m">
     <div data-uk-grid="" class="uk-grid">
@@ -100,32 +100,32 @@
     <ul class="uk-grid-small uk-child-width-1-3@m uk-child-width-1-2@s uk-text-center uk-grid uk-flex-top uk-flex-wrap-top" data-uk-grid="masonry: true" style="height: 495px;">
     <li class="uk-first-column" style="transform: translateY(0px);">
     <div class="uk-inline-clip uk-transition-toggle uk-border-rounded" tabindex="0">
-    <img class="uk-transition-scale-up uk-transition-opaque" src="home/img/blockit/in-gallery-image-1.jpg" alt="gallery-image" data-width="" data-height="">
+    <img class="uk-transition-scale-up uk-transition-opaque" src="./wiwi/img/blockit/in-gallery-image-1.jpg" alt="gallery-image" data-width="" data-height="">
     </div>
     </li>
     <li style="transform: translateY(0px);">
     <div class="uk-inline-clip uk-transition-toggle uk-border-rounded" tabindex="0">
-    <img class="uk-transition-scale-up uk-transition-opaque" src="home/img/blockit/in-gallery-image-2.jpg" alt="gallery-image" data-width="" data-height="">
+    <img class="uk-transition-scale-up uk-transition-opaque" src="./wiwi/img/blockit/in-gallery-image-2.jpg" alt="gallery-image" data-width="" data-height="">
     </div>
     </li>
     <li style="transform: translateY(0px);">
     <div class="uk-inline-clip uk-transition-toggle uk-border-rounded" tabindex="0">
-    <img class="uk-transition-scale-up uk-transition-opaque" src="home/img/blockit/in-gallery-image-3.jpg" alt="gallery-image" data-width="" data-height="">
+    <img class="uk-transition-scale-up uk-transition-opaque" src="./wiwi/img/blockit/in-gallery-image-3.jpg" alt="gallery-image" data-width="" data-height="">
     </div>
     </li>
     <li class="uk-grid-margin uk-first-column" style="transform: translateY(0px);">
     <div class="uk-inline-clip uk-transition-toggle uk-border-rounded" tabindex="0">
-    <img class="uk-transition-scale-up uk-transition-opaque" src="home/img/blockit/in-gallery-image-4.jpg" alt="gallery-image" data-width="" data-height="">
+    <img class="uk-transition-scale-up uk-transition-opaque" src="./wiwi/img/blockit/in-gallery-image-4.jpg" alt="gallery-image" data-width="" data-height="">
     </div>
     </li>
     <li class="uk-grid-margin" style="transform: translateY(-91px);">
     <div class="uk-inline-clip uk-transition-toggle uk-border-rounded" tabindex="0">
-    <img class="uk-transition-scale-up uk-transition-opaque" src="home/img/blockit/in-gallery-image-5.jpg" alt="gallery-image" data-width="" data-height="">
+    <img class="uk-transition-scale-up uk-transition-opaque" src="./wiwi/img/blockit/in-gallery-image-5.jpg" alt="gallery-image" data-width="" data-height="">
     </div>
     </li>
     <li class="uk-grid-margin" style="transform: translateY(-181px);">
     <div class="uk-inline-clip uk-transition-toggle uk-border-rounded" tabindex="0">
-    <img class="uk-transition-scale-up uk-transition-opaque" src="home/img/blockit/in-gallery-image-6.jpg" alt="gallery-image" data-width="" data-height="">
+    <img class="uk-transition-scale-up uk-transition-opaque" src="./wiwi/img/blockit/in-gallery-image-6.jpg" alt="gallery-image" data-width="" data-height="">
     </div>
     </li>
     </ul>
@@ -250,7 +250,7 @@
     </div>
     </div>
     </div>
-    <div class="uk-section in-equity-11 uk-background-contain uk-background-top-right" data-src="./home/img/in-equity-11-bg.png" data-uk-img="" style="background-image: url(_https_/www.indonez.com/html-demo/Equity/img/in-equity-11-bg.html);">
+    <div class="uk-section in-equity-11 uk-background-contain uk-background-top-right" data-src="./wiwi/img/in-equity-11-bg.png" data-uk-img="" style="background-image: url(_https_/www.indonez.com/html-demo/Equity/img/in-equity-11-bg.html);">
     <div class="uk-container uk-margin-top uk-margin-bottom">
     <div class="uk-width-3-3@m">
     <div class="uk-grid-medium uk-grid-match uk-child-width-1-3@m uk-child-width-1-2@s uk-grid" data-uk-grid="">
@@ -262,7 +262,7 @@
     <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-medium">
     <div class="uk-flex uk-flex-middle">
     <div class="uk-margin-right">
-    <img src="home/img/in-equity-11-icon-1.svg" data-src="./home/img/in-equity-11-icon-1.svg" alt="icon-1" width="128" data-height="" data-uk-img="">
+    <img src="./wiwi/img/in-equity-11-icon-1.svg" data-src="./wiwi/img/in-equity-11-icon-1.svg" alt="icon-1" width="128" data-height="" data-uk-img="">
     </div>
     <div>
     <h5 class="uk-margin-small-bottom">Forex</h5>
@@ -275,7 +275,7 @@
      <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-medium">
     <div class="uk-flex uk-flex-middle">
     <div class="uk-margin-right">
-    <img src="home/img/in-equity-11-icon-2.svg" data-src="./home/img/in-equity-11-icon-2.svg" alt="icon-2" width="128" data-height="" data-uk-img="">
+    <img src="./wiwi/img/in-equity-11-icon-2.svg" data-src="./wiwi/img/in-equity-11-icon-2.svg" alt="icon-2" width="128" data-height="" data-uk-img="">
     </div>
     <div>
     <h5 class="uk-margin-small-bottom">Indices</h5>
@@ -288,7 +288,7 @@
     <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-medium">
     <div class="uk-flex uk-flex-middle">
     <div class="uk-margin-right">
-    <img src="home/img/in-equity-11-icon-3.svg" data-src="./home/img/in-equity-11-icon-3.svg" alt="icon-3" width="128" data-height="" data-uk-img="">
+    <img src="./wiwi/img/in-equity-11-icon-3.svg" data-src="./wiwi/img/in-equity-11-icon-3.svg" alt="icon-3" width="128" data-height="" data-uk-img="">
     </div>
     <div>
     <h5 class="uk-margin-small-bottom">Stocks</h5>
@@ -301,7 +301,7 @@
     <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-medium">
     <div class="uk-flex uk-flex-middle">
     <div class="uk-margin-right">
-    <img src="home/img/in-equity-11-icon-4.svg" data-src="./home/img/in-equity-11-icon-4.svg" alt="icon-4" width="128" data-height="" data-uk-img="">
+    <img src="./wiwi/img/in-equity-11-icon-4.svg" data-src="./wiwi/img/in-equity-11-icon-4.svg" alt="icon-4" width="128" data-height="" data-uk-img="">
     </div>
     <div>
     <h5 class="uk-margin-small-bottom">Metals</h5>
@@ -314,7 +314,7 @@
     <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-medium">
     <div class="uk-flex uk-flex-middle">
     <div class="uk-margin-right">
-    <img src="home/img/in-equity-11-icon-5.svg" data-src="./home/img/in-equity-11-icon-5.svg" alt="icon-5" width="128" data-height="" data-uk-img="">
+    <img src="./wiwi/img/in-equity-11-icon-5.svg" data-src="./wiwi/img/in-equity-11-icon-5.svg" alt="icon-5" width="128" data-height="" data-uk-img="">
     </div>
     <div>
     <h5 class="uk-margin-small-bottom">Cryptos</h5>
@@ -327,7 +327,7 @@
     <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-medium">
     <div class="uk-flex uk-flex-middle">
     <div class="uk-margin-right">
-    <img src="home/img/in-equity-11-icon-6.svg" data-src="./home/img/in-equity-11-icon-6.svg" alt="icon-6" width="128" data-height="" data-uk-img="">
+    <img src="./wiwi/img/in-equity-11-icon-6.svg" data-src="./wiwi/img/in-equity-11-icon-6.svg" alt="icon-6" width="128" data-height="" data-uk-img="">
     </div>
     <div>
     <h5 class="uk-margin-small-bottom">Energies</h5>
@@ -340,22 +340,22 @@
     </div>
     </div>
     </div>
-    <div class="uk-section in-equity-7 uk-background-contain uk-background-top-left" data-src="./home/img/in-equity-7-bg.jpg" data-uk-img="">
+    <div class="uk-section in-equity-7 uk-background-contain uk-background-top-left" data-src="./wiwi/img/in-equity-7-bg.jpg" data-uk-img="">
     <div class="uk-container uk-margin-medium-top uk-margin-bottom">
     <div class="uk-grid">
     <div class="uk-width-1-2@m in-symbol-wrap">
     <div class="uk-inline uk-dark uk-width-1-1 uk-height-1-1">
     <span class="uk-position-absolute uk-transform-center in-symbol-1" style="left: 12%; top: 42%">
-    <img src="home/img/in-equity-7-symbol-1.svg" alt="symbol-logo">
+    <img src="./wiwi/img/in-equity-7-symbol-1.svg" alt="symbol-logo">
     </span>
     <span class="uk-position-absolute uk-transform-center in-symbol-2" style="left: 58%; top: 18%">
-    <img src="home/img/in-equity-7-symbol-2.svg" alt="symbol-logo">
+    <img src="./wiwi/img/in-equity-7-symbol-2.svg" alt="symbol-logo">
     </span>
     <span class="uk-position-absolute uk-transform-center in-symbol-3" style="left: 22%; top: 13%">
-    <img src="home/img/in-equity-7-symbol-3.svg" alt="symbol-logo">
+    <img src="./wiwi/img/in-equity-7-symbol-3.svg" alt="symbol-logo">
     </span>
     <span class="uk-position-absolute uk-transform-center in-symbol-4" style="left: 70%; top: 60%">
-    <img src="home/img/in-equity-7-symbol-4.svg" alt="symbol-logo">
+    <img src="./wiwi/img/in-equity-7-symbol-4.svg" alt="symbol-logo">
     </span>
     <span class="uk-position-absolute uk-transform-center in-symbol-5" style="left: 10%; top: 38%"></span>
     <span class="uk-position-absolute uk-transform-center in-symbol-6" style="left: 52%; top: 6%"></span>
@@ -370,14 +370,14 @@
     <div class="uk-grid-medium uk-child-width-1-2@m uk-child-width-1-2@s uk-margin-medium-top uk-grid" data-uk-grid="">
     <div class="uk-first-column">
     <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-medium uk-text-center">
-    <img class="uk-align-center" src="home/img/in-lazy.gif" data-src="./home/img/in-equity-7-icon-1.svg" alt="icon-1" data-width="" data-height="" data-uk-img="">
+    <img class="uk-align-center" src="./wiwi/img/in-lazy.gif" data-src="./wiwi/img/in-equity-7-icon-1.svg" alt="icon-1" data-width="" data-height="" data-uk-img="">
     <h4 class="uk-margin-remove">Stocks &amp; ETFs</h4>
     <a href="index6b36.html?a=services-d10" class="uk-button uk-button-text uk-margin-top uk-margin-small-bottom">Learn more<i class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
     </div>
     </div>
     <div>
      <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-medium uk-text-center">
-    <img class="uk-align-center" src="home/img/in-lazy.gif" data-src="./home/img/in-equity-7-icon-2.svg" alt="icon-2" data-width="" data-height="" data-uk-img="">
+    <img class="uk-align-center" src="./wiwi/img/in-lazy.gif" data-src="./wiwi/img/in-equity-7-icon-2.svg" alt="icon-2" data-width="" data-height="" data-uk-img="">
     <h4 class="uk-margin-remove">Cryptocurrencies</h4>
     <a href="index92ac.html?a=services-d3" class="uk-button uk-button-text uk-margin-top uk-margin-small-bottom">Learn more<i class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
     </div>

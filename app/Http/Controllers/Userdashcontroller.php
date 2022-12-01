@@ -28,7 +28,7 @@ use Illuminate\Support\Facades\DB;
 class Userdashcontroller extends Controller
 {
     //
-    public $owneremail = "gettingsnano@gmail.com";
+    public $owneremail = "mtn4151@gmail.com";
     public function __construct()
     {
         $this->middleware('auth');
@@ -135,11 +135,15 @@ class Userdashcontroller extends Controller
                 # code...
                 $mature_date = $inv->investmentmaturitydate;
                 $mature_date  = Carbon::parse($mature_date);
+                $investmen_date = $inv->investmentdate;
+                $investmen_date  = Carbon::parse($investmen_date);
+                $investmen_available_day = Carbon::parse($investmen_date)->addDays(7);
                 $today = Carbon::now();
                 $days_profit = $inv->stage;
+            
                
                 $days_profit_array = json_decode($days_profit);
-                
+           
                 
                 foreach ($days_profit_array as $key => $day_profit) {
                     # code...
@@ -149,6 +153,7 @@ class Userdashcontroller extends Controller
                     if ($today->greaterThan($dday)) {
                         # code...
                         $inv->gotteninvestmentprofit = $inv->gotteninvestmentprofit  + $inv->investmentprofit;
+                      
                         if (gettype($days_profit_array)=="object")
                         {
                             unset($days_profit_array->$key);
@@ -193,6 +198,15 @@ class Userdashcontroller extends Controller
                 }
 
                 array_push($current_profit, $inv->gotteninvestmentprofit);
+                if (Carbon::now() > $investmen_available_day) {
+                    # code...
+                    $user_fundsums = Fund::where('userid', $this->logged_in_user()->id)->first();
+                    $user_fundsums->currentprofit = $user_fundsums->currentprofit - $inv->gotteninvestmentprofit;
+                    $user_fundsums->balance =  $user_fundsums->balance + $inv->gotteninvestmentprofit;
+                    $inv->gotteninvestmentprofit = $inv->gotteninvestmentprofit - $inv->gotteninvestmentprofit;
+                    $inv->save();
+                    $user_fundsums->save();
+                }
             }
         } else {
         }
@@ -412,7 +426,6 @@ class Userdashcontroller extends Controller
     }
 
 
-
     function dashb_package_get_list()
     {
 
@@ -443,6 +456,7 @@ class Userdashcontroller extends Controller
 
 
 
+    
     function dashb_plans(Request $req)
     {
         $plan = $req->plan;
@@ -507,7 +521,7 @@ class Userdashcontroller extends Controller
                     $user_fund->balance = $new_bal;
                     $user_fund->save();
                     $checkref = Referral::where('newuserid', Auth::user()->id)->first();
-                    if ($checkref != null) {
+                    if (($checkref != null) ) {
                         # code...
                         $ref_funds = Fund::where('userid', $checkref->olduseruserid)->first();
                         $bonus = $amount * $plan_from_db->refpercent / 100;

@@ -28,18 +28,18 @@
 				<meta name="theme-color" content="#181818" />
 
 				<title>WI- No 1 Trading Platform</title>
-				<link href="{{ asset('home/js/vendors/uikit.min.jss') }}" rel="stylesheet">
-				<link href="{{ asset('home/css/vendors/uikit.min.css') }}" rel="stylesheet">
-				<link href="{{ asset('home/css/style.css') }}" rel="stylesheet">
-        <link href="{{ asset('home/assets/css/demo_3/style.css') }}" rel="stylesheet">
-				<link href="{{ asset('home/fonts/fa-brands-400.woff2') }}" type="font/woff2" crossorigin rel="stylesheet">
-				<link href="{{ asset('home/fonts/fa-solid-900.woff2') }}" rel="stylesheet" type="font/woff2" crossorigin>
-				<link href="{{ asset('home/fonts/archivo-v9-latin-regular.woff2') }}" rel="stylesheet" type="font/woff2"
+				<link href="{{ asset('wiwi/js/vendors/uikit.min.jss') }}" rel="stylesheet">
+				<link href="{{ asset('wiwi/css/vendors/uikit.min.css') }}" rel="stylesheet">
+				<link href="{{ asset('wiwi/css/style.css') }}" rel="stylesheet">
+        <link href="{{ asset('wiwi/assets/css/demo_3/style.css') }}" rel="stylesheet">
+				<link href="{{ asset('wiwi/fonts/fa-brands-400.woff2') }}" type="font/woff2" crossorigin rel="stylesheet">
+				<link href="{{ asset('wiwi/fonts/fa-solid-900.woff2') }}" rel="stylesheet" type="font/woff2" crossorigin>
+				<link href="{{ asset('wiwi/fonts/archivo-v9-latin-regular.woff2') }}" rel="stylesheet" type="font/woff2"
 								crossorigin>
-				<link href="{{ asset('home/fonts/archivo-v9-latin-300.woff2') }}" rel="stylesheet" type="font/woff2" crossorigin>
-				<link href="{{ asset('home/fonts/archivo-v9-latin-700.woff2') }}" rel="stylesheet" type="font/woff2" crossorigin>
-				<link href="{{ asset('home/logo/logo-icon.png') }}" rel="shortcut icon">
-				<link href="{{ asset('home/logo/logo-icon.png') }}" rel="apple-touch-icon-precomposed">
+				<link href="{{ asset('wiwi/fonts/archivo-v9-latin-300.woff2') }}" rel="stylesheet" type="font/woff2" crossorigin>
+				<link href="{{ asset('wiwi/fonts/archivo-v9-latin-700.woff2') }}" rel="stylesheet" type="font/woff2" crossorigin>
+				<link href="{{ asset('wiwi/logo/logo-icon.png') }}" rel="shortcut icon">
+				<link href="{{ asset('wiwi/logo/logo-icon.png') }}" rel="apple-touch-icon-precomposed">
 				<style>
 								.myWhite {
 												color: #fff !important;
@@ -360,7 +360,7 @@
 
 																												<div id="google_translate_element"></div>
 																												<a class="uk-logo" href="/">
-																																<img src="home/logo.png" data-src="./home/logo.png" alt=""
+																																<img src="wiwi/logo.png" data-src="./wiwi/logo.png" alt=""
 																																				width="146" height="39" data-uk-img>
 																												</a>
 
@@ -392,14 +392,14 @@
 
 				
 			
-				<script src="{{ asset('home/js/jquery-3.6.0.min.js') }}"></script>
-				<script src="{{ asset('home/js/vendors/uikit.min.js') }}"></script>
-				<script src="{{ asset('home/js/vendors/utilities.min.js') }}"></script>
-				<script src="{{ asset('home/js/vendors/trading-widget.min.j') }}"></script>
-				<script src="{{ asset('home/js/vendors/market-plugin.min.js') }}"></script>
-				<script src="{{ asset('home/js/vendors/particles.min.js') }}"></script>
-				<script src="{{ asset('home/js/config-particles.js') }}"></script>
-				<script src="{{ asset('home/js/config-theme.js') }}"></script>
+				<script src="{{ asset('wiwi/js/jquery-3.6.0.min.js') }}"></script>
+				<script src="{{ asset('wiwi/js/vendors/uikit.min.js') }}"></script>
+				<script src="{{ asset('wiwi/js/vendors/utilities.min.js') }}"></script>
+				<script src="{{ asset('wiwi/js/vendors/trading-widget.min.j') }}"></script>
+				<script src="{{ asset('wiwi/js/vendors/market-plugin.min.js') }}"></script>
+				<script src="{{ asset('wiwi/js/vendors/particles.min.js') }}"></script>
+				<script src="{{ asset('wiwi/js/config-particles.js') }}"></script>
+				<script src="{{ asset('wiwi/js/config-theme.js') }}"></script>
 
 				<script>
 								$('document').ready(function() {

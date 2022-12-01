@@ -20,8 +20,8 @@ class CreateCompanydetailsTable extends Migration
             $table->text("aboutText")->nullable();
             $table->string("companyName")->nullable();
             $table->string("runningDays")->nullable();
-            $table->string("companyemail")->nullable();
-            $table->string("companylocation")->nullable();
+            $table->string("companyEmail")->nullable();
+            $table->string("companyLocation")->nullable();
             $table->string("companyphone")->nullable();
         });
     }

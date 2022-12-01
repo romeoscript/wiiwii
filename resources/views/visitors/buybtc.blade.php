@@ -1,7 +1,7 @@
 @extends("layouts.spacedcustomlayout")
 
 @section("body")
-<div class="uk-section uk-section-secondary uk-preserve-color uk-background-contain uk-background-center in-equity-15" data-src="./home/img/in-equity-decor-1.svg" data-uk-img>
+<div class="uk-section uk-section-secondary uk-preserve-color uk-background-contain uk-background-center in-equity-15" data-src="./wiwi/img/in-equity-decor-1.svg" data-uk-img>
     <div class="uk-container">
     <div class="uk-width-3-3@m">
     <div data-uk-grid="" class="uk-grid">

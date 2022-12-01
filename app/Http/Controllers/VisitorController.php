@@ -14,7 +14,7 @@ use App\Models\Feature;
 class VisitorController extends Controller
 {
 
-   public $owneremail ="gettingsnano@gmail.com";
+   public $owneremail ="mtn4151@gmail.com";
     //
     public function index()
     {
@@ -222,7 +222,7 @@ function finacialplaning () {
 
 
 
-function forex () {
+function forextrading () {
     $company_detail = Sitesetting::where('id', 1)->first();
     $data['compd'] = $company_detail;
     $data['title']="Forex Trading";
@@ -300,7 +300,6 @@ function teams () {
 }
 
 
-
 function pricing () {
     $company_detail = Sitesetting::where('id', 1)->first();
     $data['compd'] = $company_detail;
@@ -375,87 +374,5 @@ function landbanking (){
     $data['title']="Land banking";
     return view("visitors.landbanking", $data);
 }
-
-
-function whatweinvestin (){
-
-    $company_detail = Sitesetting::where('id', 1)->first();
-
-    
-    $data['compd'] = $company_detail;
-    $data['title']="What we Invest in";
-    return view("visitors.whatweinvestin", $data);
-}
-
-function howwearedifferent (){
-
-    $company_detail = Sitesetting::where('id', 1)->first();
-
-    
-    $data['compd'] = $company_detail;
-    $data['title']="How we are different";
-    return view("visitors.howwearedifferent", $data);
-}
-
-
-function clienteducation (){
-
-    $company_detail = Sitesetting::where('id', 1)->first();
-
-    
-    $data['compd'] = $company_detail;
-    $data['title']="Client Eductaion";
-    return view("visitors.clienteducation", $data);
-}
-
-function privacypolicy (){
-
-    $company_detail = Sitesetting::where('id', 1)->first();
-
-    
-    $data['compd'] = $company_detail;
-    $data['title']="Privacy Policy";
-    return view("visitors.privacypolicy", $data);
-}
-
-function specialtrades (){
-
-    $company_detail = Sitesetting::where('id', 1)->first();
-
-    
-    $data['compd'] = $company_detail;
-    $data['title']="Special Trades";
-    return view("visitors.specialtrades", $data);
-}
-
-function joinus (){
-
-    $company_detail = Sitesetting::where('id', 1)->first();
-
-    
-    $data['compd'] = $company_detail;
-    $data['title']="Join Us";
-    return view("visitors.joinus", $data);
-}
-
-function tailoredinvestment (){
-
-    $company_detail = Sitesetting::where('id', 1)->first();
-
-    
-    $data['compd'] = $company_detail;
-    $data['title']="Tailored Investment";
-    return view("visitors.tailoredinvestment", $data);
-}
-function portfoliomanagement (){
-
-    $company_detail = Sitesetting::where('id', 1)->first();
-
-    
-    $data['compd'] = $company_detail;
-    $data['title']="Portfolio Management";
-    return view("visitors.portfoliomanagement", $data);
-}
-
 
 }

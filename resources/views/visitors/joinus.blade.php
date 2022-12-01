@@ -3,28 +3,28 @@
 @section("body")
 
 
-  <script src="home/assets/vendors/js/vendor.bundle.base.js"></script>
+  <script src="wiwi/assets/vendors/js/vendor.bundle.base.js"></script>
 
 
-  <script src="home/assets/vendors/chart.js/Chart.min.js"></script>
-  <script src="home/assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
-  <script src="home/assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-  <script src="home/assets/vendors/justgage/raphael-2.1.4.min.js"></script>
-  <script src="home/assets/vendors/justgage/justgage.js"></script>
+  <script src="wiwi/assets/vendors/chart.js/Chart.min.js"></script>
+  <script src="wiwi/assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
+  <script src="wiwi/assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+  <script src="wiwi/assets/vendors/justgage/raphael-2.1.4.min.js"></script>
+  <script src="wiwi/assets/vendors/justgage/justgage.js"></script>
   
-  <script src="home/assets/vendors/datatables.net/jquery.dataTables.js"></script>
-  <script src="home/assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
-  <script src="home/assets/vendors/datatables.net-fixedcolumns/dataTables.fixedColumns.min.js"></script>
+  <script src="wiwi/assets/vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="wiwi/assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="wiwi/assets/vendors/datatables.net-fixedcolumns/dataTables.fixedColumns.min.js"></script>
   
-  <script src="home/assets/js/shared/off-canvas.js"></script>
-  <script src="home/assets/js/shared/hoverable-collapse.js"></script>
-  <script src="home/assets/js/shared/misc.js"></script>
-  <script src="home/assets/js/shared/settings.js"></script>
-  <script src="home/assets/js/shared/todolist.js"></script>
+  <script src="wiwi/assets/js/shared/off-canvas.js"></script>
+  <script src="wiwi/assets/js/shared/hoverable-collapse.js"></script>
+  <script src="wiwi/assets/js/shared/misc.js"></script>
+  <script src="wiwi/assets/js/shared/settings.js"></script>
+  <script src="wiwi/assets/js/shared/todolist.js"></script>
   
   
-  <script src="home/assets/js/demo_1/dashboard.js"></script>
-  <script src="home/assets/js/shared/data-table.js"></script>
+  <script src="wiwi/assets/js/demo_1/dashboard.js"></script>
+  <script src="wiwi/assets/js/shared/data-table.js"></script>
   <script src="../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/js/fontawesome.js"></script>
   <script>
        $(function() {

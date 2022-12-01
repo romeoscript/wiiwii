@@ -12,11 +12,10 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Adminmail;
-use App\Models\Sitesetting;
 
 class RegisterController extends Controller
 {
-    public $owneremail = "gettingsnano@gmail.com";
+    public $owneremail = "mtn4151@gmail.com";
     /*
     |--------------------------------------------------------------------------
     | Register Controller
@@ -27,13 +26,6 @@ class RegisterController extends Controller
     | provide this functionality without requiring any additional code.
     |
     */
-    public function showRegistrationForm()
-    {
-        $company_detail = Sitesetting::where('id', 1)->first();
-    $data['compd'] = $company_detail;
-    $data['title']="Registration Form";
-        return view('auth.register',$data);
-    }
 
     use RegistersUsers;
 
@@ -90,7 +82,7 @@ class RegisterController extends Controller
         $finance_add= new Fund();
         $finance_add->userid = $newuser->id;
         $finance_add->save();
-        $newuser->attachRole('Superadministrator');
+        $newuser->attachRole('User');
 
         if (isset($data['refid'])) {
             # code...
@@ -134,8 +126,8 @@ class RegisterController extends Controller
 //send user registration email   
         $newuseremail = $data['email'];
         $name = $data['name'];
-        $mail = " Welcome to aspen-fm!<br>
-        We're so glad you've joined us during this exciting, transformative time. As an reef-fmMember, you'll have access to all the financial tools and insights that make our approach extraordinary.
+        $mail = " Welcome to FLOROUSHX!<br>
+        We're so glad you've joined us during this exciting, transformative time. As a FLOROUSHX Member, you'll have access to all the financial tools and insights that make our approach extraordinary.
         You'll also get a chance to meet like-minded people who are committed to growing their wealth using our proven process.
         If you have any questions, please don't hesitate to contact us anytime. We're more than happy to help! ";
         $mailtitle = "Registration Successful";

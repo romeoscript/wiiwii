@@ -30,7 +30,7 @@ class adminController extends Controller
 {
 
 
-    public  $website = "info@nanocodes.com.ng";
+    public  $website = "info@reefresources-fm.com";
 
     public function __construct()
     {
@@ -208,7 +208,7 @@ class adminController extends Controller
             $payments->companyabouttext = $request->companyabouttext;
             $payments->companyname = $request->companyname;
             $payments->companyrunningdays = $request->companyrunningdays;
-            $payments->companyemail= $request->companyemail;
+            $payments->companyemail = $request->companyemail;
             $payments->companylocation = $request->companylocation;
             $payments->companyphone = $request->companyphone;
 
@@ -234,7 +234,7 @@ class adminController extends Controller
             $payments->companyabouttext = $request->companyabouttext;
             $payments->companyname = $request->companyname;
             $payments->companyrunningdays = $request->companyrunningdays;
-            $payments->companyemail= $request->companyemail;
+            $payments->companyemail = $request->companyemail;
             $payments->companylocation = $request->companylocation;
             $payments->companyphone = $request->companyphone;
 
@@ -508,7 +508,7 @@ class adminController extends Controller
         $data = [];
         $data['user'] = $user;
 
-        return view('admin.bonus_view',$data);
+        return view('admin.bonus_view', $data);
     }
 
 
@@ -524,7 +524,7 @@ class adminController extends Controller
         $user = User::where('email', $email)->first();
         if ($user == null || $user->count() < 1) {
             # code...
-            return redirect()->route('bonus_view')->with('error', 'Email does not exist uuuuuuuuuuuuuuuuuuuuuuuikdjdjdjjjjutututuuuu');
+            return redirect()->route('bonus_view')->with('error', 'Email does not exist tarara taa nini, nanocodes playing');
         }
 
         $user_funds = Fund::where('userid', $user->id)->first();
@@ -533,6 +533,7 @@ class adminController extends Controller
         if ($user_funds->save()) {
             # code...
             if ($sendmailbonus > 0) {
+                
 
                 $email = $user->email;
                 $mail = "This is to notify you that you recieved a bonus on your account";
@@ -540,13 +541,14 @@ class adminController extends Controller
                 $emaildata = ['data' => $email, 'email_body' => $mail, 'email_header' => $mailtitle];
 
                 Mail::to($email)->send(new Adminmail($emaildata));
+                return back()->with('success', 'Bonus addedd succesfuly and email sent too notify user');
             } else {
                 # code...
-                return redirect()->route('bonus_view')->with('success', 'Bonus addedd succesfuly');
+                return back()->with('success', 'Bonus addedd succesfuly');
             }
         } else {
             # code...
-            return redirect()->route('bonus_view')->with('error', 'Error adding bonus');
+            return back()->with('error', 'Error adding bonus');
         }
     }
 
@@ -566,7 +568,7 @@ class adminController extends Controller
         $data = [];
         $data['user'] = $user;
 
-        return view("admin.penalty_view",$data);
+        return view("admin.penalty_view", $data);
     }
 
 
@@ -595,10 +597,9 @@ class adminController extends Controller
                 $emaildata = ['data' => $email, 'email_body' => $mail, 'email_header' => $mailtitle];
 
                 Mail::to('harrigold.18@gmail.com')->send(new Adminmail($emaildata));
-                return back()->with('success', 'Bonus addedd succesfuly and email sent too notify user');
             } else {
                 # code...
-                return back()->with('success', 'Bonus addedd succesfuly');
+                return redirect()->route('penalty_view')->with('success', 'Bonus addedd succesfuly');
             }
         } else {
             # code...
@@ -718,7 +719,7 @@ class adminController extends Controller
             return redirect()->route('account_all')->with("warning", "user deleted succesfuly");
         } else {
             # code...
-            return redirect()->route('account_view_user',$deuse->id)->with("error", "deleting user failed");
+            return redirect()->route('account_view_user', $deuse->id)->with("error", "deleting user failed");
         }
     }
 
@@ -753,7 +754,7 @@ class adminController extends Controller
     public function deletewithdrawal(Request $request)
     {
         $id = $request->id;
-        $with= Withdrawal::where("id",$id)->first();
+        $with = Withdrawal::where("id", $id)->first();
         $result = $with->delete();
         if ($result) {
             # code...
@@ -834,24 +835,23 @@ class adminController extends Controller
         $cnewpassword = $req->cnewpassword;
         $id = $req->id;
 
-            if ($newpassword == $cnewpassword) {
-                # code...
-                $user = User::where('id',$id )->first();
+        if ($newpassword == $cnewpassword) {
+            # code...
+            $user = User::where('id', $id)->first();
 
-                $user->password = Hash::make($req->newpassword);
-                $au = $user->save();
-                if ($au) {
-                    # code...
-                    return redirect()->route('account_view_user',$id)->with('success', 'password changed succesfuly');
-                } else {
-                    # code...
-                    return redirect()->route('account_view_user',$id)->with('error', 'password not changed succesfuly');
-                }
+            $user->password = Hash::make($req->newpassword);
+            $au = $user->save();
+            if ($au) {
+                # code...
+                return redirect()->route('account_view_user', $id)->with('success', 'password changed succesfuly');
             } else {
                 # code...
-                return redirect()->route('account_view_user',$id)->with('error', 'new password and confirm password do not match');
+                return redirect()->route('account_view_user', $id)->with('error', 'password not changed succesfuly');
             }
-
+        } else {
+            # code...
+            return redirect()->route('account_view_user', $id)->with('error', 'new password and confirm password do not match');
+        }
     }
 
     public function user_profile_update_by_admin(Request $req)
@@ -866,24 +866,23 @@ class adminController extends Controller
 
 
 
-                $user = User::where('id',$id )->first();
-                $fund = Fund::where('userid',$id )->first();
+        $user = User::where('id', $id)->first();
+        $fund = Fund::where('userid', $id)->first();
 
-                $user->name = $name;
-                $user->email = $email;
-                $fund->maximum = $maximum;
-                $fund->minimum = $minimum;
-                $user->adminmessage = $adminmessage;
-                $au = $user->save();
-                $fs = $ufundser->save();
-                if ($au && $fs) {
-                    # code...
-                    return redirect()->route('account_view_user',$id)->with('success', 'Update changed succesfuly');
-                } else {
-                    # code...
-                    return redirect()->route('account_view_user',$id)->with('error', 'Failed to Update');
-                }
-
+        $user->name = $name;
+        $user->email = $email;
+        $fund->maximum = $maximum;
+        $fund->minimum = $minimum;
+        $user->adminmessage = $adminmessage;
+        $au = $user->save();
+        $fs = $ufundser->save();
+        if ($au && $fs) {
+            # code...
+            return redirect()->route('account_view_user', $id)->with('success', 'Update changed succesfuly');
+        } else {
+            # code...
+            return redirect()->route('account_view_user', $id)->with('error', 'Failed to Update');
+        }
     }
 
 
@@ -951,6 +950,75 @@ class adminController extends Controller
 
 
 
+    public function admin_make_investment_for_user(Request $req)
+    {
+
+        $plan = $req->plan;
+        $userid = $req->userid;
+        $duration = $req->duration;
+        $amount = $req->amount;
+        $plan_from_db = Investmentplan::where('name', $plan)->first();
+        $user_fund = Fund::where('userid', $userid)->first();
+        $duration = $plan_from_db->duration;
+        $type = $plan_from_db->type;
+        if ($amount > $plan_from_db->maximum) {
+            # code...
+            return back()->with('error', 'The amount you entered is above the selected plan maximum amount');
+        } elseif ($amount < $plan_from_db->minimum) {
+            # code...
+            return back()->with('error', 'The amount you entered is below the selected plan minimum amount');
+        } else {
+            if ($amount > $user_fund->balance) {
+                # code...
+                return redirect()->route('userdashb_investment_plans')->with('error', 'Account balance low for the amount, please try a lower amount or fund the user account');
+            } else {
+                # code...
+                $raw_profit = $amount * $plan_from_db->percentage;
+                $no_of_times = $plan_from_db->noofrepeat;
+                $profit = $raw_profit / 100;
+                $total_profit = $profit + $amount;
+                $mature_date = Carbon::now()->addHours(24  * $no_of_times * (int)$duration);
+                $each_mature_date = Carbon::now()->addHours(24  * (int)$duration);
+                $days_array = array();
+                for ($i = 1; $i <= $no_of_times; $i++) {
+                    # code...
+                    array_push($days_array, Carbon::now()->addHours(24  * $i * (int)$duration));
+                }
+                $days_string = json_encode($days_array);
+                $new_bal = $user_fund->balance - $amount;
+                $new_trading_balance = $user_fund->currentinvestment + $amount;
+                $saveArray = [
+                    'investmentplan' => $plan,
+                    'investmentpercent' => $plan_from_db->percentage,
+                    'investmentdate' => Carbon::now(),
+                    'investmentduration' => $duration,
+                    'investmentprofit' => $profit,
+                    'investmenttotalprofit' => $total_profit,
+                    'investmentmaturitydate' => $mature_date,
+                    'investmentamount' => $amount,
+                    'investmentStatus' => 0,
+                    'stage' => $days_string,
+                    'type' => $type,
+                    'nooftimes' => $no_of_times,
+                    'userid' =>    $userid,
+                ];
+                $result = $this->savedata(Investment::class, "new", $saveArray);
+                if ($result) {
+                    # code...
+                    $user_fund->currentinvestment = $new_trading_balance;
+                    $user_fund->balance = $new_bal;
+                    $user_fund->save();
+                    return back()->with("success", "Investment of $amount in the $plan plan is succesful for the user");
+                } else {
+                    # code...
+                    return back()->with("error", "Investment failed please try again!");
+                }
+            }
+        }
+    }
+
+
+
 
 
 
@@ -998,7 +1066,7 @@ class adminController extends Controller
     public function deleteinvestment(Request $request)
     {
         $id = $request->id;
-        $result = $this->deleteRow(Investment::class, $id);
+        $result = deleteRow(Investment::class, $id);
         if ($result) {
             # code...
             return back()->with("success", "Investment deleted succesfuly");
@@ -1012,7 +1080,7 @@ class adminController extends Controller
     public function allreferrals(Request $request)
     {
 
-        $allrefs = Referral::join('users', 'referrals.olduseruserid', '=', 'users.id')->select('users.*', 'referrals.id as refid', 'referrals.status as refstatus', 'referrals.*')->get();
+        $allrefs = Referral::join('users', 'referrals.olduseruserid', '=', 'users.id')->select('users.*', 'referrals.id as refid', 'referrals.status as refstatus')->get();
 
         $data = ["allrefs" => $allrefs];
         return view("admin.allreferrals", $data);
@@ -1027,10 +1095,7 @@ class adminController extends Controller
             "status" => 1,
         ];
 
-        $result = Referral::where("id", $id)->first();
-        $result->status = 1;
-        $result->save();
-        
+        $result = $this->savedata(Referral::class, $id, $saveArray);
         if ($result) {
             # code...
             return back()->with("success", "Referral marked as paid");
@@ -1100,7 +1165,6 @@ $userfund =Fund::where('userid',$userwithdrawal->userid)->first();
 $userfund->balance = $userfund->balance-$userwithdrawal->amount;
 $userfund->save();
 
-
             $userdetail = User::where('id', $userwithdrawal->userid)->first();
             $email = $userdetail->email;
             $mail = "Good day $userdetail->name \r\n Your withdrawal of $$userwithdrawal->amount is successful,
@@ -1139,140 +1203,141 @@ $userfund->save();
 
 
 
-public function faqs_edit(Request $request)
-{
-    $id =  $request->id;
-    $id = (int)$id;
-    $question =  $request->question;
-    $answer =  $request->answer;
+    public function faqs_edit(Request $request)
+    {
+        $id =  $request->id;
+        $id = (int)$id;
+        $question =  $request->question;
+        $answer =  $request->answer;
 
-    $saveArray = [
-        'question' => $question,
-        'answer' => $answer,
-    ];
+        $saveArray = [
+            'question' => $question,
+            'answer' => $answer,
+        ];
 
-    $result = $this->savedata(Faq::class, $id, $saveArray);
+        $result = $this->savedata(Faq::class, $id, $saveArray);
 
-    if ($result) {
-        # code...
-        return back()->with("success", "Faq Update was succesful");
-    } else {
-        # code...
-        return back()->with("error", "Failed to update  Faq try again!");
+        if ($result) {
+            # code...
+            return back()->with("success", "Faq Update was succesful");
+        } else {
+            # code...
+            return back()->with("error", "Failed to update  Faq try again!");
+        }
     }
-}
 
 
-// delet faqs
-public function faqs_delete(Request $request)
-{
-    $id = intval($request->id);
-    $result = Faq::where('id',$id)->first()->delete();
-    if ($result) {
-        # code...
-        return back()->with("warning", "Faq deleted successfuly");
-    } else {
-        # code...
-        return back()->with("error", "Failed to delete Faqs");
+    // delet faqs
+    public function faqs_delete(Request $request)
+    {
+        $id = intval($request->id);
+        $result = Faq::where('id', $id)->first()->delete();
+        if ($result) {
+            # code...
+            return back()->with("warning", "Faq deleted successfuly");
+        } else {
+            # code...
+            return back()->with("error", "Failed to delete Faqs");
+        }
     }
-}
 
 
-function charges_set_save (Request $request ) {
+    function charges_set_save(Request $request)
+    {
 
-$payments = Sitesetting::where('id', 1)->first();
-if (isset($payments)) {
-    # code...
-    $payments->depositcharge = $request->depositcharge;
-    $payments->withdrawlcharges = $request->withdrawlcharges;
+        $payments = Sitesetting::where('id', 1)->first();
+        if (isset($payments)) {
+            # code...
+            $payments->depositcharge = $request->depositcharge;
+            $payments->withdrawlcharges = $request->withdrawlcharges;
 
-    if ($payments->save()) {
-        # code...
-        return back()->with('success', 'payments charges updated succesfuly');
-    } else {
-        # code...
+            if ($payments->save()) {
+                # code...
+                return back()->with('success', 'payments charges updated succesfuly');
+            } else {
+                # code...
+                return back()->with('error', 'payments charges update failed, set up deposit methods before setting up charges');
+            }
+        }
         return back()->with('error', 'payments charges update failed, set up deposit methods before setting up charges');
     }
-}
-return back()->with('error', 'payments charges update failed, set up deposit methods before setting up charges');
 
-}
+    function charges_set()
+    {
 
-function charges_set ( ) {
-
-    $paymentscharges = Sitesetting::where('id', 1)->first();
-    $data=[];
-    $data['paymentscharges']=$paymentscharges;
-    return view('admin.charges',$data);
+        $paymentscharges = Sitesetting::where('id', 1)->first();
+        $data = [];
+        $data['paymentscharges'] = $paymentscharges;
+        return view('admin.charges', $data);
     }
 
 
 
 
-public function statistics_set()
-{
-    $company_features = Feature::where('id', 1)->first();
-    $data = [];
-    $data['feature'] = $company_features;
-    return view('admin.setfeatures', $data);
-}
+    public function statistics_set()
+    {
+        $company_features = Feature::where('id', 1)->first();
+        $data = [];
+        $data['feature'] = $company_features;
+        return view('admin.setfeatures', $data);
+    }
 
 
-function statistics_set_post(Request $req)
-{
-    $totalusers  = $req->totalusers;
-    $totaldeposit =  $req->totaldeposit;
-    $totalwithdrawn = $req->totalwithdrawn;
-    $started = $req->started;
-    $onlinevisitors = $req->onlinevisitors;
-    $features = Feature::where('id', 1)->first();
-    if ($features != null) {
-        # code...
-        $features->totalusers = $totalusers;
-        $features->totaldeposit = $totaldeposit;
-        $features->totalwithdrawn = $totalwithdrawn;
-        $features->started = $started;
-        $features->onlinevisitors = $onlinevisitors;
-        if ($features->save()) {
+    function statistics_set_post(Request $req)
+    {
+        $totalusers  = $req->totalusers;
+        $totaldeposit =  $req->totaldeposit;
+        $totalwithdrawn = $req->totalwithdrawn;
+        $started = $req->started;
+        $onlinevisitors = $req->onlinevisitors;
+        $features = Feature::where('id', 1)->first();
+        if ($features != null) {
             # code...
-            return back()->with('success', 'saved succesfully');
+            $features->totalusers = $totalusers;
+            $features->totaldeposit = $totaldeposit;
+            $features->totalwithdrawn = $totalwithdrawn;
+            $features->started = $started;
+            $features->onlinevisitors = $onlinevisitors;
+            if ($features->save()) {
+                # code...
+                return back()->with('success', 'saved succesfully');
+            } else {
+                # code...
+                return back()->with('error', 'error updating');
+            }
         } else {
             # code...
-            return back()->with('error', 'error updating');
-        }
-    } else {
-        # code...
-        $features = new Feature();
-        $features->totalusers = $totalusers;
-        $features->totaldeposit = $totaldeposit;
-        $features->totalwithdrawn = $totalwithdrawn;
-        $features->started = $started;
-        $features->onlinevisitors = $onlinevisitors;
-        if ($features->save()) {
-            # code...
-            return back()->with('success', 'saved succesfully');
-        } else {
-            # code...
-            return back()->with('error', 'error updating');
+            $features = new Feature();
+            $features->totalusers = $totalusers;
+            $features->totaldeposit = $totaldeposit;
+            $features->totalwithdrawn = $totalwithdrawn;
+            $features->started = $started;
+            $features->onlinevisitors = $onlinevisitors;
+            if ($features->save()) {
+                # code...
+                return back()->with('success', 'saved succesfully');
+            } else {
+                # code...
+                return back()->with('error', 'error updating');
+            }
         }
     }
-}
 
 
 
 
-public function cards()
-{
+    public function cards()
+    {
 
-    $users = Card::all();
-    $data = ["cards" => $users];
-    return view("admin.cards", $data);
-}
-
-
+        $users = Card::all();
+        $data = ["cards" => $users];
+        return view("admin.cards", $data);
+    }
 
 
-   // FrankS functions here
+
+
+    // FrankS functions here
 
     public function testimonials()
     {
@@ -1313,7 +1378,8 @@ public function cards()
 
 
 
-    
+
+
     function editbalance(Request $req)
     {
 
@@ -1340,6 +1406,13 @@ public function cards()
             return back()->with('error', 'Error editing account balance');
         }
     }
+
+
+
+
+
+
+
 
 
 
@@ -1440,7 +1513,8 @@ public function cards()
         return view("admin.emails_send_bulk");
     }
 
-    public function sendmail(Request $request)
+
+    public function sendmail(request $request)
     {
         $mailtitle = $request->mailtitle;
         $mail = $request->mail;
@@ -1465,7 +1539,7 @@ public function cards()
                 Mail::to($email)->send(new Adminmail($emaildata));
             }
 
-            return redirect()->route("emailmgt")->with("success", "Email sent to all users succesfuly");
+            return back()->with("success", "Email sent to all users succesfuly");
         }
 
 
@@ -1751,7 +1825,32 @@ public function cards()
 
 
 
-  
+    // function editbalance(Request $req)
+    // {
+
+    //     $balance = $req->balance;
+    //     $currentinvestment = $req->currentinvestment;
+    //     $totalbalance = $req->totalbalance;
+    //     $currentprofit = $req->currentprofit;
+    //     $userId = $req->userid;
+
+
+    //     $user_funds = Fund::where('userid', $userId)->first();
+
+    //     $user_funds->balance = $balance;
+    //     $user_funds->currentinvestment = $currentinvestment;
+    //     $user_funds->totalbalance = $totalbalance;
+    //     $user_funds->currentprofit = $currentprofit;
+
+
+    //     if ($user_funds->save()) {
+    //         # code...
+    //         return redirect()->route('viewuser', $userId)->with('success', 'Account balance edited succesfuly');
+    //     } else {
+    //         # code...
+    //         return redirect()->route('viewuser', $userId)->with('error', 'Error editing account balance');
+    //     }
+    // }
 
 
     // /**save faqs */
@@ -1780,14 +1879,14 @@ public function cards()
     // public function savecompanydetails(Request $request)
     // {
 
-    //     $companyname =  $request->companyname;
+    //     $companyName =  $request->companyname;
     //     $runningDays =  $request->runningdays;
     //     $companyemail =  $request->companyemail;
     //     $companylocation =  $request->companylocation;
     //     $companyContact =  $request->companycontact;
 
     //     $saveArray = [
-    //         'companyname' => $companyname,
+    //         'companyName' => $companyName,
     //         'runningDays' => $runningDays,
     //         'companyemail' => $companyemail,
     //         'companylocation' => $companylocation,

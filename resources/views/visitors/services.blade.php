@@ -4,7 +4,7 @@
 
 
 
-<div class="uk-section uk-section-secondary uk-preserve-color uk-background-contain uk-background-center in-equity-15" data-src="./home/img/in-equity-decor-1.svg" data-uk-img>
+<div class="uk-section uk-section-secondary uk-preserve-color uk-background-contain uk-background-center in-equity-15" data-src="./wiwi/img/in-equity-decor-1.svg" data-uk-img>
     <div class="uk-container">
     <div class="uk-width-3-3@m">
     <div data-uk-grid="" class="uk-grid">
@@ -57,7 +57,7 @@
     </div>
     
     <div class="uk-first-column">
-     <img src="home/serv/3.jpg" alt="" style="width:100%; height:auto;">
+     <img src="wiwi/serv/3.jpg" alt="" style="width:100%; height:auto;">
     <h4 class="uk-margin-small-top uk-margin-remove-bottom">Cryptocurrencies</h4>
     <div class="myP">
     Wiiwiiprotrade now offers all traders the opportunity to trade a wide range of the top ranked digital
@@ -67,7 +67,7 @@
     </div>
    
     <div class="uk-first-column">
-    <img src="home/serv/stock.html" alt="" style="width:100%; height:auto;">
+    <img src="wiwi/serv/stock.html" alt="" style="width:100%; height:auto;">
     <h4 class="uk-margin-small-top uk-margin-remove-bottom">Stock or Share</h4>
     <div class="myP">
     A stock or share (also known as a company's "equity") is a

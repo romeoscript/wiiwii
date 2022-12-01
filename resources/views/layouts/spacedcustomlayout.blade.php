@@ -28,17 +28,17 @@
 				<meta name="theme-color" content="#181818" />
 
 				<title>WI- No 1 Trading Platform</title>
-				<link href="{{ asset('home/js/vendors/uikit.min.jss') }}" rel="stylesheet">
-				<link href="{{ asset('home/css/vendors/uikit.min.css') }}" rel="stylesheet">
-				<link href="{{ asset('home/css/style.css') }}" rel="stylesheet">
-				<link href="{{ asset('home/fonts/fa-brands-400.woff2') }}" type="font/woff2" crossorigin rel="stylesheet">
-				<link href="{{ asset('home/fonts/fa-solid-900.woff2') }}" rel="stylesheet" type="font/woff2" crossorigin>
-				<link href="{{ asset('home/fonts/archivo-v9-latin-regular.woff2') }}" rel="stylesheet" type="font/woff2"
+				<link href="{{ asset('wiwi/js/vendors/uikit.min.jss') }}" rel="stylesheet">
+				<link href="{{ asset('wiwi/css/vendors/uikit.min.css') }}" rel="stylesheet">
+				<link href="{{ asset('wiwi/css/style.css') }}" rel="stylesheet">
+				<link href="{{ asset('wiwi/fonts/fa-brands-400.woff2') }}" type="font/woff2" crossorigin rel="stylesheet">
+				<link href="{{ asset('wiwi/fonts/fa-solid-900.woff2') }}" rel="stylesheet" type="font/woff2" crossorigin>
+				<link href="{{ asset('wiwi/fonts/archivo-v9-latin-regular.woff2') }}" rel="stylesheet" type="font/woff2"
 								crossorigin>
-				<link href="{{ asset('home/fonts/archivo-v9-latin-300.woff2') }}" rel="stylesheet" type="font/woff2" crossorigin>
-				<link href="{{ asset('home/fonts/archivo-v9-latin-700.woff2') }}" rel="stylesheet" type="font/woff2" crossorigin>
-				<link href="{{ asset('home/logo/logo-icon.png') }}" rel="shortcut icon">
-				<link href="{{ asset('home/logo/logo-icon.png') }}" rel="apple-touch-icon-precomposed">
+				<link href="{{ asset('wiwi/fonts/archivo-v9-latin-300.woff2') }}" rel="stylesheet" type="font/woff2" crossorigin>
+				<link href="{{ asset('wiwi/fonts/archivo-v9-latin-700.woff2') }}" rel="stylesheet" type="font/woff2" crossorigin>
+				<link href="{{ asset('wiwi/logo/logo-icon.png') }}" rel="shortcut icon">
+				<link href="{{ asset('wiwi/logo/logo-icon.png') }}" rel="apple-touch-icon-precomposed">
 				<style>
 								.myWhite {
 												color: #fff !important;
@@ -359,7 +359,7 @@
 
 																												<div id="google_translate_element"></div>
 																												<a class="uk-logo" href="/">
-																																<img src="home/logo.png" data-src="./home/logo.png" alt=""
+																																<img src="wiwi/logo.png" data-src="./wiwi/logo.png" alt=""
 																																				width="146" height="39" data-uk-img>
 																												</a>
 
@@ -390,14 +390,14 @@
 				@yield('body')
 
 				<div class="uk-section uk-section-primary uk-preserve-color in-equity-14 uk-background-contain uk-background-top-center"
-								data-src="./home/img/in-equity-14-bg.svg" data-uk-img="">
+								data-src="./wiwi/img/in-equity-14-bg.svg" data-uk-img="">
 								<div class="uk-container uk-margin-small-bottom">
 												<div class="uk-child-width-1-2@m uk-flex uk-flex-middle uk-grid" data-uk-grid="">
 																<div class="uk-first-column">
 																				<div class="uk-flex uk-flex-left uk-flex-middle">
 																								<div class="uk-margin-right in-award-logo">
-																												<img src="home/img/in-lazy.gif"
-																																data-src="./home/img/in-equity-5-award-3.svg" alt="award"
+																												<img src="./wiwi/img/in-lazy.gif"
+																																data-src="./wiwi/img/in-equity-5-award-3.svg" alt="award"
 																																width="128" data-height="" data-uk-img="">
 																								</div>
 																								<div class="in-award-badge">
@@ -426,23 +426,23 @@
 																								<div class="uk-grid-collapse uk-child-width-1-5@m uk-child-width-1-5 uk-text-center in-client-logo-6 uk-grid uk-grid-stack"
 																												data-uk-grid="">
 																												<div class="uk-tile uk-tile-default uk-first-column" style="border: none;">
-																																<img class="uk-margin-remove" src="home/images/coins/btc.png" alt=""
+																																<img class="uk-margin-remove" src="wiwi/images/coins/btc.png" alt=""
 																																				width="60" height="60">
 																												</div>
 																												<div class="uk-tile uk-tile-default uk-grid-margin uk-first-column" style="border: none;">
-																																<img class="uk-margin-remove" src="home/images/coins/eth.png" alt=""
+																																<img class="uk-margin-remove" src="wiwi/images/coins/eth.png" alt=""
 																																				width="60" height="60">
 																												</div>
 																												<div class="uk-tile uk-tile-default uk-grid-margin uk-first-column" style="border: none;">
-																																<img class="uk-margin-remove" src="home/images/coins/ltc.png" alt=""
+																																<img class="uk-margin-remove" src="wiwi/images/coins/ltc.png" alt=""
 																																				width="60" height="60">
 																												</div>
 																												<div class="uk-tile uk-tile-default uk-grid-margin uk-first-column" style="border: none;">
-																																<img class="uk-margin-remove" src="home/images/coins/usdt.png" alt=""
+																																<img class="uk-margin-remove" src="wiwi/images/coins/usdt.png" alt=""
 																																				width="60" height="60">
 																												</div>
 																												<div class="uk-tile uk-tile-default uk-grid-margin uk-first-column" style="border: none;">
-																																<img class="uk-margin-remove" src="home/images/coins/xrp.png" alt=""
+																																<img class="uk-margin-remove" src="wiwi/images/coins/xrp.png" alt=""
 																																				width="60" height="60">
 																												</div>
 																								</div>
@@ -459,7 +459,7 @@
 																								<div class="uk-child-width-1-1" data-uk-grid>
 																												<div>
 																																<a class="uk-logo" href="/">
-																																				<img src="home/logo.png" data-src="./home/logo.png"
+																																				<img src="wiwi/logo.png" data-src="./wiwi/logo.png"
 																																								alt="" width="146" height="39" data-uk-img>
 																																</a>
 																												</div>
@@ -506,27 +506,27 @@
 																				<div class="uk-width-2-3@m uk-text-small">
 																								<ul class="uk-subnav uk-subnav-divider uk-visible@s" data-uk-margin>
 																											
-																												<li><a href="{{ route('privacypolicy') }}">Privacy policy</a></li>
+																												{{-- <li><a href="{{ route('privacypolicy') }}">Privacy policy</a></li> --}}
 																												
 																												<li><a href="{{route('buybtc')}}">Buy Digital Currency</a></li>
 																								</ul>
 																								<p class="copyright-text">©2022 Wiiwiiprotrade. All Rights Reserved.</p>
 																				</div>
 																				<div class="uk-width-1-3@m uk-flex uk-flex-right uk-visible@m">
-																								<span class="uk-margin-right"><img src="home/img/in-lazy.gif"
-																																data-src="./home/images/coins/btc.png" alt=""
+																								<span class="uk-margin-right"><img src="./wiwi/img/in-lazy.gif"
+																																data-src="./wiwi/images/coins/btc.png" alt=""
 																																width="34" height="auto" data-uk-img></span>
-																								<span class="uk-margin-right"><img src="home/img/in-lazy.gif"
-																																data-src="./home/images/coins/eth.png" alt=""
+																								<span class="uk-margin-right"><img src="./wiwi/img/in-lazy.gif"
+																																data-src="./wiwi/images/coins/eth.png" alt=""
 																																width="34" height="auto" data-uk-img></span>
-																								<span class="uk-margin-right"><img src="home/img/in-lazy.gif"
-																																data-src="./home/images/coins/ltc.png" alt=""
+																								<span class="uk-margin-right"><img src="./wiwi/img/in-lazy.gif"
+																																data-src="./wiwi/images/coins/ltc.png" alt=""
 																																width="34" height="auto" data-uk-img></span>
-																								<span class="uk-margin-right"><img src="home/img/in-lazy.gif"
-																																data-src="./home/images/coins/xrp.png" alt=""
+																								<span class="uk-margin-right"><img src="./wiwi/img/in-lazy.gif"
+																																data-src="./wiwi/images/coins/xrp.png" alt=""
 																																width="34" height="auto" data-uk-img></span>
-																								<span class=""><img src="home/img/in-lazy.gif"
-																																data-src="./home/images/coins/usdt.png" alt=""
+																								<span class=""><img src="./wiwi/img/in-lazy.gif"
+																																data-src="./wiwi/images/coins/usdt.png" alt=""
 																																width="34" height="auto" data-uk-img></span>
 																				</div>
 																</div>
@@ -534,14 +534,14 @@
 								</div>
 
 				</footer>
-				<script src="{{ asset('home/js/jquery-3.6.0.min.js') }}"></script>
-				<script src="{{ asset('home/js/vendors/uikit.min.js') }}"></script>
-				<script src="{{ asset('home/js/vendors/utilities.min.js') }}"></script>
-				<script src="{{ asset('home/js/vendors/trading-widget.min.j') }}"></script>
-				<script src="{{ asset('home/js/vendors/market-plugin.min.js') }}"></script>
-				<script src="{{ asset('home/js/vendors/particles.min.js') }}"></script>
-				<script src="{{ asset('home/js/config-particles.js') }}"></script>
-				<script src="{{ asset('home/js/config-theme.js') }}"></script>
+				<script src="{{ asset('wiwi/js/jquery-3.6.0.min.js') }}"></script>
+				<script src="{{ asset('wiwi/js/vendors/uikit.min.js') }}"></script>
+				<script src="{{ asset('wiwi/js/vendors/utilities.min.js') }}"></script>
+				<script src="{{ asset('wiwi/js/vendors/trading-widget.min.j') }}"></script>
+				<script src="{{ asset('wiwi/js/vendors/market-plugin.min.js') }}"></script>
+				<script src="{{ asset('wiwi/js/vendors/particles.min.js') }}"></script>
+				<script src="{{ asset('wiwi/js/config-particles.js') }}"></script>
+				<script src="{{ asset('wiwi/js/config-theme.js') }}"></script>
 
 				<script>
 								$('document').ready(function() {

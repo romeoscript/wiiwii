@@ -2,7 +2,6 @@
 
 @section('body')
 
-    <body class="dark-theme">
         <div class="container-scroller">
             <div class="container-fluid page-body-wrapper full-page-wrapper">
                 <div class="content-wrapper auth p-0 theme-two">

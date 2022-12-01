@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use App\Models\Sitesetting;
 
 class LoginController extends Controller
 {
@@ -21,15 +20,6 @@ class LoginController extends Controller
     */
 
     use AuthenticatesUsers;
-
-    public function showLoginForm()
-{
-    $test = 'test';
-    $company_detail = Sitesetting::where('id', 1)->first();
-    $data['compd'] = $company_detail;
-    $data['title']="Login Form";
-    return view('auth.login', compact('test'),$data);
-}
 
     /**
      * Where to redirect users after login.
