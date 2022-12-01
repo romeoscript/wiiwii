@@ -334,7 +334,7 @@
                         d="M3.2 0l5.4 5.6L14.3 0l3.2 3v9L13 16.2V7.8l-4.4 4.1L4.5 8v8.2L0 12V3l3.2-3z"
                         fill="white"></path>
                 </svg>
-                <div class="investor">reef-fmInvestor</div>
+                <div class="investor">wiiwii-fmInvestor</div>
                 <div class="chip">
                     <div class="chip-line"></div>
                     <div class="chip-line"></div>
@@ -361,7 +361,7 @@
                     <div class="section">0000</div>
                 </div>
                 <div class="end"><span class="end-text">exp.
-                        end:</span><span class="end-date"> 11/22</span></div>
+                        end:</span><span class="end-date"> 11/25</span></div>
                 <div class="card-holder">{{Auth::user()->name}}</div>
                 <div class="master">
                     <div class="circle master-red"></div>

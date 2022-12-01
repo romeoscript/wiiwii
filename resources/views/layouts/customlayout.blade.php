@@ -367,7 +367,7 @@
 																												<ul class="uk-navbar-nav uk-visible@m">
 																																<li><a href="{{ route('about') }}">About Us</a></li>
 																																<li><a href="{{route('assetsmanagement')}}">Markets</a></li>
-																																<li><a href="{{ route('fiduciary') }}">Plans</a></li>
+																																<li><a href="{{ route('cryptoplans') }}">Plans</a></li>
 																																{{-- <li><a href="{{route('services')}}">Our Services</a></li> --}}
 																																<li><a href="{{route('buybtc')}}">Buy/Sell</a></li>
 																																<li><a href="{{route('contact')}}">Contact Us</a></li>
